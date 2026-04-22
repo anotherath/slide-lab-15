@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Operations Copilot - AI Trợ Lý Vận Hành Ngân Hàng</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- Navigation -->
+      <nav class="slide-nav">
+        <button class="nav-btn prev" onclick="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slide-counter">
+          <span id="current">1</span> / <span id="total">11</span>
+        </div>
+        <button class="nav-btn next" onclick="nextSlide()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </nav>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <!-- Slide 1: Title -->
+      <section class="slide active" data-slide="1">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1920&q=80"
+            alt="Banking Technology"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content center">
+          <div class="badge">
+            <i class="fas fa-robot"></i>
+            Scenario 1
+          </div>
+          <h1 class="main-title">Bank Operations Copilot</h1>
+          <p class="subtitle">AI Trợ Lý cho Vận Hành Ngân Hàng</p>
+          <div class="divider"></div>
+          <p class="description">
+            Phân tích chi tiết 7 câu hỏi về giải pháp AI<br />cho vận hành ngân
+            hàng hiện đại
+          </p>
+          <div class="meta-info">
+            <span><i class="fas fa-calendar"></i> 2026</span>
+            <span><i class="fas fa-building-columns"></i> Ngân hàng & AI</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 2: Bài toán cốt lõi -->
+      <section class="slide" data-slide="2">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80"
+            alt="Data Analytics"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <div class="content-grid">
+            <div class="text-side">
+              <h2>Bài toán thật sự<br />mà Agent giải quyết?</h2>
+              <p class="lead">
+                Bài toán cốt lõi là
+                <strong>sự quá tải, chậm trễ và sai sót</strong> trong các tác
+                vụ thủ công có khối lượng lớn của nhân viên ngân hàng.
+              </p>
+            </div>
+            <div class="cards-side">
+              <div class="feature-card">
+                <div class="card-icon blue">
+                  <i class="fas fa-database"></i>
+                </div>
+                <h3>Trích xuất & Xác minh dữ liệu</h3>
+                <p>
+                  Tự động hóa việc tra cứu quy định nội bộ, đối chiếu hồ sơ KYC,
+                  biểu mẫu tín dụng từ nhiều nguồn phân mảnh — từ
+                  <strong>nhiều giờ xuống vài phút</strong>.
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="card-icon red">
+                  <i class="fas fa-shield-halved"></i>
+                </div>
+                <h3>Phát hiện Gian lận & Tuân thủ (AML)</h3>
+                <p>
+                  Giám sát liên tục hàng triệu giao dịch theo thờigian thực,
+                  phát hiện mẫu gian lận tinh vi và giảm thiểu
+                  <strong>false positives</strong>.
+                </p>
+              </div>
+              <div class="feature-card">
+                <div class="card-icon green">
+                  <i class="fas fa-user-check"></i>
+                </div>
+                <h3>Hỗ trợ Ra quyết định</h3>
+                <p>
+                  Tổng hợp bức tranh toàn cảnh khách hàng, giúp nhân viên có đủ
+                  dữ kiện để giải quyết trường hợp phức tạp và ra quyết định cho
+                  vay chính xác.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Cloud vs On-prem vs Hybrid -->
+      <section class="slide" data-slide="3">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
+            alt="Cloud Technology"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">
+            Nên triển khai theo Cloud, On-prem hay Hybrid?
+          </h2>
+          <p class="section-subtitle">
+            Lựa chọn tối ưu và bắt buộc cho ngành ngân hàng
+          </p>
+
+          <div class="three-cards">
+            <div class="info-card onprem">
+              <div class="card-header">
+                <i class="fas fa-server"></i>
+                <h3>On-premise</h3>
+                <span class="tag">Tại chỗ</span>
+              </div>
+              <ul>
+                <li>
+                  Lưu trữ dữ liệu nhạy cảm (KYC, điểm tín dụng, giao dịch)
+                </li>
+                <li>Tuân thủ bảo mật nghiêm ngặt</li>
+                <li>Không đưa dữ liệu cốt lõi lên public cloud</li>
+              </ul>
+            </div>
+
+            <div class="info-card cloud">
+              <div class="card-header">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud</h3>
+                <span class="tag">Đám mây</span>
+              </div>
+              <ul>
+                <li>Năng lực tính toán linh hoạt (computational power)</li>
+                <li>Xử lý khối lượng phân tích lớn</li>
+                <li>Suy luận mô hình AI và scale dễ dàng</li>
+              </ul>
+            </div>
+
+            <div class="info-card hybrid recommended">
+              <div class="card-header">
+                <i class="fas fa-network-wired"></i>
+                <h3>Hybrid</h3>
+                <span class="tag recommend">Khuyến nghị</span>
+              </div>
+              <ul>
+                <li>Dữ liệu nhạy cảm ở On-prem</li>
+                <li>AI inference và scale ở Cloud</li>
+                <li>Kết hợp ưu điểm cả hai</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Ràng buộc Enterprise -->
+      <section class="slide" data-slide="4">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=80"
+            alt="Enterprise Security"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">
+            Có ràng buộc enterprise nào phải xử lý trước?
+          </h2>
+
+          <div class="constraint-grid">
+            <div class="constraint-item">
+              <div class="constraint-num">01</div>
+              <div class="constraint-icon">
+                <i class="fas fa-plug"></i>
+              </div>
+              <h3>Tích hợp hệ thống cũ</h3>
+              <p>
+                Core Banking cũ, dữ liệu phân mảnh thành nhiều "silo". Cần chuẩn
+                hóa API và sử dụng <strong>Middleware/MCP</strong> để kết nối AI
+                với hệ thống cũ.
+              </p>
+            </div>
+
+            <div class="constraint-item">
+              <div class="constraint-num">02</div>
+              <div class="constraint-icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <h3>Bảo mật & Quyền riêng tư</h3>
+              <p>
+                Tuân thủ <strong>GDPR, CCPA</strong>, luật định danh. Ngăn chặn
+                rò rỉ dữ liệu qua cơ chế mã hóa, ẩn danh hóa.
+              </p>
+            </div>
+
+            <div class="constraint-item">
+              <div class="constraint-num">03</div>
+              <div class="constraint-icon">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+              <h3>Lưu vết kiểm toán</h3>
+              <p>
+                Mọi quyết định AI phải được ghi nhật ký rõ ràng,
+                <strong>giải thích được (Explainability)</strong> để đáp ứng
+                thanh tra, kiểm toán.
+              </p>
+            </div>
+
+            <div class="constraint-item">
+              <div class="constraint-num">04</div>
+              <div class="constraint-icon">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <h3>Human-in-the-loop</h3>
+              <p>
+                AI không được tự động ra quyết định cuối cùng. Bắt buộc có
+                <strong>sự xem xét, phê duyệt từ con ngườicó thẩm quyền</strong
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Cost — MVP Breakdown -->
+      <section class="slide" data-slide="5">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
+            alt="Finance Cost"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">MVP — Minimum Viable Product</h2>
+          <p class="section-subtitle">
+            Test 1–2 use case (KYC + tra cứu policy) | Chạy end-to-end nhưng
+            phạm vi nhỏ
+          </p>
+
+          <div class="cost-big-table">
+            <table class="cost-table large">
+              <thead>
+                <tr>
+                  <th>Hạng mục</th>
+                  <th>Mô tả</th>
+                  <th class="text-right">Cost ước lượng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-database"></i> Data pipeline</td>
+                  <td>ETL, làm sạch dữ liệu KYC, policy</td>
+                  <td class="text-right">$30K – $80K</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-search"></i> RAG system</td>
+                  <td>Vector DB + embedding + search</td>
+                  <td class="text-right">$20K – $60K</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-brain"></i> LLM / AI model</td>
+                  <td>API hoặc self-host model</td>
+                  <td class="text-right">$20K – $100K</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-plug"></i> Integration</td>
+                  <td>Kết nối Core Banking (API, middleware)</td>
+                  <td class="text-right">$50K – $150K</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-desktop"></i> Frontend (Copilot UI)</td>
+                  <td>Dashboard cho nhân viên</td>
+                  <td class="text-right">$10K – $40K</td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="fas fa-shield-halved"></i> Security & compliance
+                  </td>
+                  <td>Logging, audit, masking</td>
+                  <td class="text-right">$30K – $100K</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-server"></i> Infra (cloud + on-prem)</td>
+                  <td>Server, GPU, storage</td>
+                  <td class="text-right">$30K – $100K</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2"><strong>Tổng MVP</strong></td>
+                  <td class="text-right">
+                    <strong class="highlight-blue">~$200K – $500K</strong>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="cost-note large">
+            <i class="fas fa-triangle-exclamation"></i>
+            <span
+              >Không đụng Core Banking → ~$150K | Tích hợp sâu hệ thống cũ → có
+              thể lên $700K+</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 6: Cost — Growth / Scale -->
+      <section class="slide" data-slide="6">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80"
+            alt="Growth Scale"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">Growth — Scale / Production</h2>
+          <p class="section-subtitle">
+            Mở rộng sang nhiều use case: Fraud detection, Loan processing,
+            Transaction monitoring
+          </p>
+
+          <div class="growth-layout">
+            <div class="growth-left">
+              <div class="growth-insight">
+                <div class="insight-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Cost KHÔNG tăng tuyến tính</h3>
+                <p>Vì đã có sẵn nền tảng từ MVP:</p>
+                <div class="reuse-chips large">
+                  <span class="chip"
+                    ><i class="fas fa-check"></i> Data pipeline</span
+                  >
+                  <span class="chip"><i class="fas fa-check"></i> RAG</span>
+                  <span class="chip"><i class="fas fa-check"></i> API</span>
+                  <span class="chip"><i class="fas fa-check"></i> UI</span>
+                </div>
+                <p class="insight-highlight">
+                  → Chỉ cần <strong>"plug thêm use case"</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="growth-right">
+              <div class="growth-table-card">
+                <h4><i class="fas fa-plus"></i> Cost mỗi module mới</h4>
+                <table class="cost-table">
+                  <tbody>
+                    <tr>
+                      <td>Thêm use case AI</td>
+                      <td class="text-right">$10K – $30K</td>
+                    </tr>
+                    <tr>
+                      <td>Tích hợp thêm data source</td>
+                      <td class="text-right">$10K – $40K</td>
+                    </tr>
+                    <tr>
+                      <td>Fine-tune / optimize model</td>
+                      <td class="text-right">$5K – $20K</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td><strong>Tổng / use case</strong></td>
+                      <td class="text-right">
+                        <strong class="highlight-green">~$30K – $80K</strong>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Cost — OPEX hàng tháng -->
+      <section class="slide" data-slide="7">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1920&q=80"
+            alt="Monthly Cost"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content center">
+          <h2 class="section-title">Chi phí vận hành hàng tháng (OPEX)</h2>
+          <p class="section-subtitle">Nhiều người quên nhưng cực quan trọng</p>
+
+          <div class="opex-cards">
+            <div class="opex-card">
+              <div class="opex-card-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>LLM API / inference</h3>
+              <div class="opex-card-price">$5K – $50K</div>
+              <p>/ tháng</p>
+            </div>
+            <div class="opex-card">
+              <div class="opex-card-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Infra (GPU, server)</h3>
+              <div class="opex-card-price">$5K – $30K</div>
+              <p>/ tháng</p>
+            </div>
+            <div class="opex-card">
+              <div class="opex-card-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3>Monitoring & logging</h3>
+              <div class="opex-card-price">$2K – $10K</div>
+              <p>/ tháng</p>
+            </div>
+            <div class="opex-card">
+              <div class="opex-card-icon">
+                <i class="fas fa-screwdriver-wrench"></i>
+              </div>
+              <h3>DevOps / maintenance</h3>
+              <div class="opex-card-price">$10K – $30K</div>
+              <p>/ tháng</p>
+            </div>
+          </div>
+
+          <div class="opex-total">
+            <span class="opex-total-label">Tổng OPEX hàng tháng</span>
+            <span class="opex-total-value">~$20K – $100K</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Cost — Tại sao Growth rẻ hơn 80% -->
+      <section class="slide" data-slide="8">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1553729459-afe8ef875649?w=1920&q=80"
+            alt="Savings"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content center">
+          <h2 class="section-title">Tại sao Growth rẻ hơn 80%?</h2>
+
+          <div class="why-80-layout">
+            <div class="why-reuse-side">
+              <div class="why-icon-big">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h3>Vì Reusability</h3>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> RAG dùng lại</li>
+                <li><i class="fas fa-check-circle"></i> Embedding dùng lại</li>
+                <li><i class="fas fa-check-circle"></i> API dùng lại</li>
+                <li><i class="fas fa-check-circle"></i> UI dùng lại</li>
+              </ul>
+            </div>
+
+            <div class="why-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="why-add-side">
+              <div class="why-icon-big add">
+                <i class="fas fa-plus-circle"></i>
+              </div>
+              <h3>Bạn chỉ thêm</h3>
+              <div class="add-tags-big">
+                <span class="add-tag-big">Prompt</span>
+                <span class="add-tag-big">Logic</span>
+                <span class="add-tag-big">Workflow</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="saving-highlight">
+            <i class="fas fa-arrow-down"></i>
+            <span>Tiết kiệm <strong>80%</strong> chi phí khi mở rộng</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 9: 3 Chiến lược tối ưu chi phí -->
+      <section class="slide" data-slide="9">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80"
+            alt="Strategy"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">3 Chiến lược tối ưu chi phí</h2>
+
+          <div class="strategy-timeline">
+            <div class="strategy-item">
+              <div class="strategy-number">1</div>
+              <div class="strategy-content">
+                <h3>Giao phó quy trình lặp lại, khối lượng lớn</h3>
+                <p>
+                  AI xử lý toàn bộ công việc
+                  <strong>high-volume workflows</strong> (trích xuất tài liệu,
+                  kiểm tra KYC). Phân bổ chi phí đầu tư trên lượng lớn kết quả
+                  đầu ra, đem lại <strong>ROI cao</strong>.
+                </p>
+                <div class="strategy-tags">
+                  <span>High-volume</span>
+                  <span>ROI tối ưu</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="strategy-item">
+              <div class="strategy-number">2</div>
+              <div class="strategy-content">
+                <h3>Tái sử dụng "kỹ năng AI" và tài sản tích hợp</h3>
+                <p>
+                  Xây dựng API và thư viện kỹ năng chuẩn hóa (tra cứu điểm tín
+                  dụng, kiểm tra gian lận). Tái sử dụng giúp
+                  <strong>cắt giảm 80% chi phí</strong>, rút ngắn triển khai từ
+                  vài tháng xuống vài tuần.
+                </p>
+                <div class="strategy-tags">
+                  <span>Reusability</span>
+                  <span>-80% Cost</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="strategy-item">
+              <div class="strategy-number">3</div>
+              <div class="strategy-content">
+                <h3>Tự động hóa kết hợp kiểm duyệt giảm False Positives</h3>
+                <p>
+                  Luật cố định (deterministic checks) kết hợp suy luận LLM giảm
+                  thiểu cảnh báo sai. Đội ngũ compliance tập trung vào
+                  <strong>rủi ro thực sự</strong>, không tốn thờigian cho rủi ro
+                  "ảo".
+                </p>
+                <div class="strategy-tags">
+                  <span>Deterministic + LLM</span>
+                  <span>False Positive ↓</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: Scale, Reliability & Vận hành -->
+      <section class="slide" data-slide="10">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+            alt="Technology Infrastructure"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">
+            Nếu cần scale, xử lý reliability và vận hành ra sao?
+          </h2>
+
+          <div class="ops-columns">
+            <div class="ops-column">
+              <div class="ops-header">
+                <i class="fas fa-cogs"></i>
+                <h3>Vận hành (Operations)</h3>
+              </div>
+              <div class="ops-items">
+                <div class="ops-item">
+                  <i class="fas fa-layer-group"></i>
+                  <div>
+                    <h4>Kiến trúc đa tầng</h4>
+                    <p>
+                      Tách biệt Core Banking với hệ thống AI, đảm bảo AI xác
+                      suất không làm sập hệ thống lõi.
+                    </p>
+                  </div>
+                </div>
+                <div class="ops-item">
+                  <i class="fas fa-traffic-light"></i>
+                  <div>
+                    <h4>Middleware "cảnh sát giao thông"</h4>
+                    <p>
+                      Điều hướng dữ liệu theo thờigian thực qua
+                      <strong>Event-driven architecture</strong>.
+                    </p>
+                  </div>
+                </div>
+                <div class="ops-item">
+                  <i class="fas fa-plug-circle-check"></i>
+                  <div>
+                    <h4>Model Context Protocol (MCP)</h4>
+                    <p>
+                      Agent gọi vào hệ thống cũ một cách
+                      <strong>an toàn, có kiểm soát</strong>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ops-column">
+              <div class="ops-header">
+                <i class="fas fa-shield-halved"></i>
+                <h3>Độ tin cậy (Reliability)</h3>
+              </div>
+              <div class="ops-items">
+                <div class="ops-item">
+                  <i class="fas fa-chart-bar"></i>
+                  <div>
+                    <h4>Evaluation Framework</h4>
+                    <p>
+                      Giám sát liên tục bằng
+                      <strong>bộ dữ liệu chuẩn</strong> do chuyên gia (SMEs)
+                      biên soạn.
+                    </p>
+                  </div>
+                </div>
+                <div class="ops-item">
+                  <i class="fas fa-wave-square"></i>
+                  <div>
+                    <h4>Data Drift & Model Drift</h4>
+                    <p>
+                      Phát hiện trôi dữ liệu/mô hình, cảnh báo hiệu suất giảm và
+                      <strong>huấn luyện lại</strong> khi cần.
+                    </p>
+                  </div>
+                </div>
+                <div class="ops-item">
+                  <i class="fas fa-user-check"></i>
+                  <div>
+                    <h4>Human-in-the-loop</h4>
+                    <p>
+                      Con ngườiduyệt quyết định rủi ro cao, chặn
+                      <strong>hallucination</strong> gây gián đoạn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 11: Track phù hợp Phase 2 -->
+      <section class="slide" data-slide="11">
+        <div class="slide-bg">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+            alt="Modern Building"
+          />
+          <div class="overlay"></div>
+        </div>
+        <div class="slide-content">
+          <h2 class="section-title">Dự án phù hợp với track nào ở Phase 2?</h2>
+          <p class="section-desc">
+            Đặc thù: Tạo Agent giúp nhân sự ngân hàng tra cứu lượng lớn thông
+            tin nội bộ và tự động hóa luồng công việc xử lý hồ sơ
+          </p>
+
+          <div class="track-cards">
+            <div class="track-card">
+              <div class="track-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3>Agent RAG cho tài liệu doanh nghiệp</h3>
+              <p>
+                Tra cứu quy định, chính sách nội bộ từ kho tài liệu khổng lồ
+                bằng <strong>Retrieval-Augmented Generation</strong>.
+              </p>
+              <div class="track-match">
+                <i class="fas fa-check-circle"></i> Phù hợp cao
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-icon">
+                <i class="fas fa-users-gear"></i>
+              </div>
+              <h3>AI workflow assistant cho team vận hành</h3>
+              <p>
+                Hỗ trợ giao dịch viên, back-office, compliance trong
+                <strong>các tác vụ hàng ngày</strong>.
+              </p>
+              <div class="track-match">
+                <i class="fas fa-check-circle"></i> Phù hợp cao
+              </div>
+            </div>
+
+            <div class="track-card">
+              <div class="track-icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3>Multi-agent xử lý quy trình nội bộ</h3>
+              <p>
+                Nhiều agent phối hợp xử lý <strong>quy trình phức tạp</strong>:
+                KYC → Đánh giá tín dụng → Phê duyệt.
+              </p>
+              <div class="track-match">
+                <i class="fas fa-check-circle"></i> Phù hợp cao
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Keyboard hint -->
+    <div class="keyboard-hint">
+      <span
+        ><i class="fas fa-arrow-left"></i>
+        <i class="fas fa-arrow-right"></i> Điều hướng</span
+      >
+      <span class="sep">|</span>
+      <span><i class="fas fa-expand"></i> F Toàn màn hình</span>
+    </div>
+
+    <script src="js/slide.js"></script>
+  </body>
+</html>
