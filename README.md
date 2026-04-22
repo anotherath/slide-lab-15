@@ -1,4 +1,4 @@
-Slide tại đây trực tiếp: [Slide](https://anotherath.github.io/slide-lab-15/)
+[Xem slide tại đây](https://anotherath.github.io/slide-lab-15/)
 
 # Bank Operations Copilot - Slide Presentation
 
