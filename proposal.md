@@ -1,3 +1,5 @@
+Nhóm C2
+
 Dưới đây là phần phân tích chi tiết cho 7 câu hỏi về đề tài Bank Operations Copilot (AI trợ lý cho vận hành ngân hàng - Scenario 1) dựa trên các tài liệu đã cung cấp:
 1. Bài toán thật sự mà agent giải quyết là gì? Bài toán cốt lõi mà agent giải quyết là sự quá tải, chậm trễ và sai sót trong các tác vụ thủ công có khối lượng lớn của nhân viên ngân hàng (giao dịch viên, bộ phận back-office, tuân thủ)
 . Cụ thể:
