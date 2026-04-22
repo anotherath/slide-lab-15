@@ -1,3 +1,5 @@
+Slide tại đây trực tiếp: [GitHub Pages](https://anotherath.github.io/slide-lab-15/)
+
 # Bank Operations Copilot - Slide Presentation
 
 Slide trình bày phân tích chi tiết 7 câu hỏi về đề tài **Bank Operations Copilot** (AI Trợ Lý Vận Hành Ngân Hàng).
@@ -23,5 +25,3 @@ Slide trình bày phân tích chi tiết 7 câu hỏi về đề tài **Bank Ope
 - **Home / End**: Slide đầu / cuối
 
 ## Demo
-
-Xem slide trực tiếp: [GitHub Pages](https://YOUR_USERNAME.github.io/slide-lab-15/)
